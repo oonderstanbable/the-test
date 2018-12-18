@@ -43,7 +43,8 @@ client.on('message', message => {
         + "ok google twitter?\n"
         + "ok google ball\n"
         + "ok google what is # +/*- #\n"
-        + "ok google urban (then a word)");
+        + "ok google urban (then a word)/n"
+        +"```");
     }
 });
 
