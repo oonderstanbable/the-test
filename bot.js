@@ -34,7 +34,7 @@ client.on('message', message => {
     if (message.content === 'ok google help') {
         const embed = new Discord.RichEmbed()
             .setDescription("ok google\nok google what is the weather like today?\nok google what is 4 + 8\nok google help\nok google when does OOOPS have a birthday?\nok google set a reminder?\nok google what is 1 + 1?\nok google flip a coin\nok google ball\nok google can you show me the default dance?\nok google when does manbundan have his birthday?\nok google why is OOOPS so bad a krunker?\nok google gay?\nok google help?\mok google twitter?")
-            .setColor('#HEXCODE')
+            .setColor('#FF0000')
         message.channel.send(embed)
     }
 });
