@@ -32,7 +32,7 @@ client.on("message",a=>{mV=a.content.split(" "),mV.length>=7&&"ok google what is
 
 client.on('message', message => {
     if (tL(message.content) === 'ok google help') {
-        message.author.send("```ok google\n"
+        message.author.send("color":15229474,"fields" : "```ok google\n"
         + "ok google what is the weather like today?\n"
         + "ok google what is 4 + 8\n"
         + "ok google help\n"
