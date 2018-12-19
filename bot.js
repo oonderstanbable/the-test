@@ -32,7 +32,8 @@ client.on("message",a=>{mV=a.content.split(" "),mV.length>=7&&"ok google what is
 
 client.on('message', message => {
     if (tL(message.content) === 'ok google help') {
-        message.author.send("```ok google\n"
+        const embed = new Discord.RichEmbed()
+    .setDescription("ok google\n"
         + "ok google what is the weather like today?\n"
         + "ok google what is 4 + 8\n"
         + "ok google help\n"
@@ -43,10 +44,12 @@ client.on('message', message => {
         + "ok google ball\n"
         + "ok google can you show me the default dance?\n"
         + "ok google when does manbundan have his birthday?\n"
-        + "ok google why is OOOPS so bad a krunker?\n"
+        + "ok google why is OOOPS so bad a krunker?\n"  
         + "ok google gay?\n"
         + "ok google help?\n"
-        + "ok google twitter?```");
+        + "ok google twitter?")
+    .setColor('15229474')
+message.channel.send(embed)
     }
 });
 
