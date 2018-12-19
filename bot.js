@@ -48,7 +48,7 @@ client.on('message', message => {
         + "ok google gay?\n"
         + "ok google help?\n"
         + "ok google twitter?")
-    .setColor('15229474')
+    .setColor('RED')
 message.channel.send(embed)
     }
 });
