@@ -32,7 +32,21 @@ client.on("message",a=>{mV=a.content.split(" "),mV.length>=7&&"ok google what is
 
 client.on('message', message => {
     if (tL(message.content) === 'ok google help') {
-        message.author.send({"embed":{"color":15229474,"fields" :["```ok google\n","ok google what is the weather like today?\n","ok google what is 4 + 8\n","ok google help\n","ok google when does OOOPS have a birthday?\n","ok google set a reminder?\n","ok google what is 1 + 1?\n","ok google flip a coin\n","ok google ball\n","ok google can you show me the default dance?\n","ok google when does manbundan have his birthday?\n","ok google why is OOOPS so bad a krunker?\n","ok google gay?\n","ok google help?\n","ok google twitter\n?","```"]});
+        message.author.send("```ok google\n"
+        + "ok google what is the weather like today?\n"
+        + "ok google what is 4 + 8\n"
+        + "ok google help\n"
+        + "ok google when does OOOPS have a birthday?\n"
+        + "ok google set a reminder?\n"
+        + "ok google what is 1 + 1?\n"
+        + "ok google flip a coin\n"
+        + "ok google ball\n"
+        + "ok google can you show me the default dance?\n"
+        + "ok google when does manbundan have his birthday?\n"
+        + "ok google why is OOOPS so bad a krunker?\n"
+        + "ok google gay?\n"
+        + "ok google help?\n"
+        + "ok google twitter?```");
     }
 });
 
