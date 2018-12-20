@@ -5,7 +5,7 @@ const urban = require('urban.js');
 client.on('ready', () => {
     console.log('Google Home!');
 });
-bot.user.setPresence({ game: { name: 'Google Home is here!', type: 0 } });
+bot.setGame('Google Home is here!');
 
 function coinflip() {
     return (Math.floor(Math.random() * 2) == 0) ? 'heads' : 'tails';
