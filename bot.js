@@ -47,7 +47,7 @@ client.on('message', message => {
         + "ok google when does manbundan have his birthday?\n"
         + "ok google why is OOOPS so bad a krunker?\n"
         + "ok google gay?\n"
-        + "ok google help?\n'
+        + "ok google help?\n"
         + "ok google twitter?\n"
         + "```")
             .setColor('#FF0000')
