@@ -33,7 +33,7 @@ client.on("message",a=>{mV=a.content.split(" "),mV.length>=7&&"ok google what is
 client.on('message', message => {
     if (message.content === 'ok google help') {
         const embed = new Discord.RichEmbed()
-            message.reply.author("```\n"
+            message.author.sendMessage("```\n"
         + "ok google\n"
         + "ok google what is the weather like today?\n"
         + "ok google what is 4 + 8\n"
