@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const urban = require('urban.js');
-const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
 
 client.on('ready', () => {
     console.log('Google Home!');
@@ -27,9 +26,22 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (tL(message.content) === 'ok google rip') {
-        message.channel.send(attachment);
+  // Voice only works in guilds, if the message does not come from a guild,
+  // we ignore it
+  if (!message.guild) return;
+
+  if (message.content === 'ok google join vc') {
+    // Only try to join the sender's voice channel if they are in one themselves
+    if (message.member.voiceChannel) {
+      message.member.voiceChannel.join()
+        .then(connection => { // Connection is an instance of VoiceConnection
+          message.reply('I have successfully connected to the channel!');
+        })
+        .catch(console.log);
+    } else {
+      message.reply('You need to join a voice channel first!');
     }
+  }
 });
 
 client.on('message', message => {
