@@ -4,7 +4,7 @@ const urban = require('urban.js');
 
 client.on('ready', () => {
     console.log('Google Home!');
-    client.user.setGame('Google Home is here!');
+    bot.user.setGame('Google Home is here!');
 });
 
 
