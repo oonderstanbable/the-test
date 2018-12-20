@@ -4,7 +4,7 @@ const urban = require('urban.js');
 
 client.on('ready', () => {
     console.log('Google Home!');
-    //bot.user.setGame('Google Home is here!');
+    Client.user.setActivity('ok google help for help', { type: "PLAYING" });
 });
 
 
