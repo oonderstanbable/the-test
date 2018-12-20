@@ -26,6 +26,13 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+    if (message.content === 'ok google rip') {
+        const attachment = new Attachment('https://i.imgur.com/w3duR07.png');
+        message.channel.send(attachment);
+    }
+});
+
+client.on('message', message => {
     if (tL(message.content) === 'ok google what is the weather like today?') {
         message.reply('https://www.accuweather.com/');
     }
