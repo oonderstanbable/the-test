@@ -4,7 +4,7 @@ const urban = require('urban.js');
 
 client.on('ready', () => {
     console.log('Google Home!');
-    Client.user.setActivity('ok google help for help', { type: "PLAYING" });
+    //Client.user.setActivity('ok google help for help', { type: "PLAYING" });
 });
 
 
@@ -23,7 +23,7 @@ function tL(a){return a.toLowerCase();}
 
 
 
-//bot.on('message', message => {
+bot.on('message', message => {
 client.on('message', message => {
     if (tL(message.content) === 'ok google?') {
         message.reply('https://www.accuweather.com/');
@@ -120,7 +120,7 @@ client.on('message', message => {
 
 client.on("message",a=>{mV=a.content.split(" "),mV.length>=7&&"ok google what is"==tL(a.content.slice(0,17))&&iN(mV[4])&&iO(mV[5])&&iN(mV[6])&&a.channel.send(Math.round(1e4*mC[mV[5]](parseInt(mV[4]),parseInt(mV[6])))/1e4)});
 
-//})
+})
 
 
 
