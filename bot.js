@@ -31,10 +31,8 @@ client.on('message', message => {
 client.on("message",a=>{mV=a.content.split(" "),mV.length>=7&&"ok google what is"==tL(a.content.slice(0,17))&&iN(mV[4])&&iO(mV[5])&&iN(mV[6])&&a.channel.send(Math.round(1e4*mC[mV[5]](parseInt(mV[4]),parseInt(mV[6])))/1e4)});
 
 client.on('message', message => {
-    if (message.content === 'ok google help') {
-        const embed = new Discord.RichEmbed()
-            message.author.send("```\n"
-        + "ok google\n"
+    if (tL(message.content) === 'ok google help') {
+        message.author.send("```ok google\n"
         + "ok google what is the weather like today?\n"
         + "ok google what is 4 + 8\n"
         + "ok google help\n"
@@ -48,10 +46,7 @@ client.on('message', message => {
         + "ok google why is OOOPS so bad a krunker?\n"
         + "ok google gay?\n"
         + "ok google help?\n"
-        + "ok google twitter?\n"
-        + "```")
-            .setColor('#FF0000')
-        message.channel.send(embed)
+        + "ok google twitter?```");
     }
 });
 
