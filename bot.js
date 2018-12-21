@@ -4,7 +4,7 @@ const urban = require('urban.js');
 
 client.on('ready', () => {
     console.log('Google Home!');
-    client.user.setActivity('for help | ok google help');
+    //client.user.setActivity('for help | ok google help');
 });
 
 
