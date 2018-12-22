@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const urban = require('urban.js');
 
-client.on('ready', () => {
+client.on('ready', function(){
     console.log('Google Home!');
     client.user.setActivity('Do ok google help for commands!');
 });
@@ -39,11 +39,14 @@ client.on('message', message => {
         + "ok google help\n"
         + "ok google when does OOOPS have a birthday?\n"
         + "ok google set a reminder?\n"
+        + "ok google what is 1 + 1?\n"
         + "ok google flip a coin\n"
         + "ok google ball\n"
+        + "ok google can you show me the default dance?\n"
         + "ok google when does manbundan have his birthday?\n"
         + "ok google why is OOOPS so bad a krunker?\n"
         + "ok google gay?\n"
+        + "ok google help?\n"
         + "ok google twitter?```");
     }
 });
@@ -61,6 +64,11 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+    if (tL(message.content) === 'ok google what is 1 + 1?') {
+        message.reply('OBVIOUSLY A FUCKING WINDOW... DUMMY');
+    }
+});
+client.on('message', message => {
     if (tL(message.content) === 'ok google flip a coin') {
         message.reply(coinflip());
     }
@@ -69,6 +77,12 @@ client.on('message', message => {
 client.on('message', message => {
     if (tL(message.content) === 'ok google ball') {
         message.reply(ball());
+    }
+});
+
+client.on('message', message => {
+    if (tL(message.content) === 'ok google can you show me the default dance?') {
+        message.reply('no I am google not no epicgames');
     }
 });
 
@@ -91,6 +105,12 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+    if (tL(message.content) === 'ok google help?') {
+        message.reply('This is in beta OOOPS is working on it');
+    }
+});
+
+client.on('message', message => {
     if (tL(message.content) === 'ok google twitter?') {
         message.reply('https://twitter.com/OOnderstandable');
     }
@@ -107,4 +127,6 @@ client.on('message', message => {
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
+
+
 
